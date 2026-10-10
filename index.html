@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#071b2c">
+  <meta name="description" content="Organic Chemistry Mastery — an interactive learning platform for beginners and BS Chemistry students.">
+  <title>Organic Chemistry Mastery | Learn, Practice, Master</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Organic Chemistry Mastery home">
+        <span class="brand-mark"><svg viewBox="0 0 48 48" aria-hidden="true"><g stroke="currentColor" stroke-width="2.3" fill="none"><path d="M24 8 37 16 37 32 24 40 11 32 11 16Z"/><path d="M24 8V2M37 16l7-4M37 32l7 4M24 40v6M11 32l-7 4M11 16l-7-4"/></g><circle cx="24" cy="24" r="5" fill="currentColor"/></svg></span>
+        <span><b>Organic Chemistry</b><small>MASTERY PLATFORM</small></span>
+      </a>
+      <div class="sidebar-search"><span>⌕</span><input id="sidebarSearch" placeholder="Search chemistry..." aria-label="Search topics"><kbd>/</kbd></div>
+      <nav id="sideNav" aria-label="Main navigation">
+        <button class="nav-item active" data-view="home"><span>⌂</span> Dashboard</button>
+        <div class="nav-label">LEARNING PATH</div>
+        <div id="moduleNav"></div>
+        <div class="nav-label">PRACTICE & TOOLS</div>
+        <button class="nav-item" data-view="quiz"><span>✳</span> Quiz center</button>
+        <button class="nav-item" data-view="tools"><span>⚗</span> Chemistry tools</button>
+        <button class="nav-item" data-view="exam"><span>▤</span> Exam preparation</button>
+        <button class="nav-item" data-view="notes"><span>▧</span> My notes & bookmarks</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="study-card"><span class="study-icon">✦</span><b>Small steps. Strong chemistry.</b><p>Learn one concept, then test your understanding.</p><button id="dailyStudy">Start a 5-min review ↗</button></div>
+        <div class="profile"><div class="avatar">OC</div><div><b>Independent learner</b><small>BS Chemistry track</small></div><span class="online-dot"></span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+        <div class="breadcrumbs"><span>Learning space</span><span class="crumb-sep">/</span><b id="crumbCurrent">Dashboard</b></div>
+        <div class="top-actions">
+          <label class="language-select"><span>文</span><select id="languageSelect" aria-label="Explanation language"><option value="en">English</option><option value="ur">اردو</option><option value="roman">Roman Urdu</option></select></label>
+          <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme">◐</button>
+          <button class="primary-btn compact" data-view="quiz">Quick quiz <span>↗</span></button>
+        </div>
+      </header>
+
+      <section class="content" id="content">
+        <div class="welcome-row">
+          <div><div class="eyebrow"><span class="pulse"></span> YOUR ORGANIC CHEMISTRY WORKSPACE</div><h1>Master Organic<br><span class="gradient-text">Chemistry.</span></h1><p class="hero-copy">Understand the logic behind molecules, reactions, and mechanisms — from your first carbon atom to advanced concepts.</p><div class="hero-actions"><button class="primary-btn" data-topic="What is Organic Chemistry">Continue learning <span>→</span></button><button class="secondary-btn" data-view="modules">Explore curriculum</button></div><div class="trust-row"><span>✓ Structured learning path</span><span>✓ Practice as you learn</span><span>✓ BS Chemistry focused</span></div></div>
+          <div class="hero-art" aria-label="Illustration of a molecular structure"><div class="orb orb-one"></div><div class="orb orb-two"></div><svg class="molecule" viewBox="0 0 360 300" role="img" aria-label="Stylized molecular network"><g stroke="#4bd5c5" stroke-width="2.2" opacity=".8"><path d="M178 143 119 106 65 139 68 204 128 231 183 199 178 143 238 108 292 141 287 203 229 231 183 199"/><path d="M119 106 126 45 181 22 238 47 238 108M65 139 18 113M292 141 331 106M287 203 324 237M128 231 113 276"/></g><g fill="#0c2b40" stroke="#4bd5c5" stroke-width="2"><circle cx="178" cy="143" r="22"/><circle cx="119" cy="106" r="15"/><circle cx="65" cy="139" r="13"/><circle cx="68" cy="204" r="13"/><circle cx="128" cy="231" r="15"/><circle cx="183" cy="199" r="16"/><circle cx="238" cy="108" r="17"/><circle cx="292" cy="141" r="14"/><circle cx="287" cy="203" r="14"/><circle cx="229" cy="231" r="12"/><circle cx="181" cy="22" r="12"/><circle cx="238" cy="47" r="12"/><circle cx="119" cy="45" r="11"/></g><g fill="#f4fbff" font-family="DM Sans" font-weight="700" font-size="12" text-anchor="middle"><text x="178" y="147">C</text><text x="119" y="110">O</text><text x="238" y="112">N</text><text x="128" y="235">C</text><text x="183" y="203">C</text><text x="181" y="26">H</text></g><g fill="#f7b955"><circle cx="18" cy="113" r="4"/><circle cx="331" cy="106" r="4"/><circle cx="324" cy="237" r="4"/><circle cx="113" cy="276" r="4"/></g></svg><div class="floating-label label-a"><span class="mini-dot teal"></span> Molecular logic</div><div class="floating-label label-b"><span class="mini-dot gold"></span> Reaction pathways</div><div class="art-caption">STRUCTURE → PROPERTY → REACTIVITY</div></div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-top"><span>Curriculum modules</span><span class="stat-icon cyan">▦</span></div><div class="stat-number" id="moduleCount">22</div><div class="stat-foot">From fundamentals to spectroscopy</div></div>
+          <div class="stat-card"><div class="stat-top"><span>Topics to explore</span><span class="stat-icon purple">⌘</span></div><div class="stat-number" id="topicCount">120+</div><div class="stat-foot">Search, study, and revise</div></div>
+          <div class="stat-card"><div class="stat-top"><span>Your progress</span><span class="stat-icon gold">↗</span></div><div class="stat-number" id="progressNumber">0%</div><div class="progress-track"><span id="progressBar"></span></div><div class="stat-foot" id="progressText">Your learning journey starts here</div></div>
+        </div>
+
+        <div class="section-heading"><div><div class="eyebrow">YOUR LEARNING PATH</div><h2>Explore the curriculum</h2><p>Choose a module and build your understanding step by step.</p></div><button class="text-button" data-view="modules">View all modules <span>→</span></button></div>
+        <div class="module-grid" id="homeModules"></div>
+
+        <div class="section-heading compact-heading"><div><div class="eyebrow">LEARN BY DOING</div><h2>Practice makes concepts stick</h2></div></div>
+        <div class="practice-grid">
+          <button class="practice-card" data-view="quiz"><span class="practice-icon pink">✳</span><span><b>Quiz center</b><small>Test concepts with instant explanations.</small></span><span class="arrow">↗</span></button>
+          <button class="practice-card" data-view="tools"><span class="practice-icon teal">⚗</span><span><b>Chemistry tools</b><small>Explore formula mass and key concepts.</small></span><span class="arrow">↗</span></button>
+          <button class="practice-card" data-view="exam"><span class="practice-icon gold">▤</span><span><b>Exam preparation</b><small>Revise definitions, reactions, and exam points.</small></span><span class="arrow">↗</span></button>
+        </div>
+        <footer>Organic Chemistry Mastery <span>Built for curious minds · Verify advanced chemistry with trusted textbooks.</span></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
